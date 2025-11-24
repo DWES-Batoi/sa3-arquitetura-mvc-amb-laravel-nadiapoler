@@ -7,7 +7,10 @@ use App\Http\Controllers\JugadoraController;
 use App\Http\Controllers\PartitController;
 
 // Ruta de bienvenida (GET /)
-Route::get('/', fn() => "Benvingut a la Guia d'Equips de Futbol Femení!");
+//Route::get('/', fn() => "Benvingut a la Guia d'Equips de Futbol Femení!");
+Route::get('/', function () {
+    return view('inicio');
+});
 
 // Genera automáticamente varias rutas REST para 'equips'
 Route::resource('equips', EquipController::class);
